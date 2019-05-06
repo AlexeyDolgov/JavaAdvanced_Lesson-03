@@ -17,10 +17,10 @@ create table magazine (
     title varchar(45) not null,
     description text not null,
     publish_date date not null,
-    subscription_price double not null
+    subscribe_price double not null
 );
 
-create table subscribes (
+create table subscribe (
 	id int not null primary key auto_increment,
     user_id int not null,
     magazine_id int not null,
@@ -29,5 +29,5 @@ create table subscribes (
     subscribe_period int not null
 );
 
-alter table subscribes add foreign key (user_id) references user (id);
-alter table subscribes add foreign key (magazine_id) references magazine (id);
+alter table subscribe add foreign key (user_id) references user (id);
+alter table subscribe add foreign key (magazine_id) references magazine (id);

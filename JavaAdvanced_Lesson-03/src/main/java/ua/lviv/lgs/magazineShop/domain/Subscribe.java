@@ -1,8 +1,8 @@
-package ua.lviv.lgs.MagazineShop;
+package ua.lviv.lgs.magazineShop.domain;
 
 import java.time.LocalDate;
 
-public class Subscribes {
+public class Subscribe {
 	private int id;
 	private int userID;
 	private int magazineID;
@@ -10,7 +10,7 @@ public class Subscribes {
 	private LocalDate subscribeDate;
 	private int subscribePeriod;
 
-	public Subscribes(int id, int userID, int magazineID, boolean subscribeStatus, LocalDate subscribeDate,
+	public Subscribe(int id, int userID, int magazineID, boolean subscribeStatus, LocalDate subscribeDate,
 			int subscribePeriod) {
 		this.id = id;
 		this.userID = userID;
@@ -20,7 +20,7 @@ public class Subscribes {
 		this.subscribePeriod = subscribePeriod;
 	}
 
-	public Subscribes(int userID, int magazineID, boolean subscribeStatus, LocalDate subscribeDate,
+	public Subscribe(int userID, int magazineID, boolean subscribeStatus, LocalDate subscribeDate,
 			int subscribePeriod) {
 		this.userID = userID;
 		this.magazineID = magazineID;
@@ -84,7 +84,7 @@ public class Subscribes {
 					+ ", Дата оформления подписки: " + subscribeDate + ", Период подписки: " + subscribePeriod
 					+ " мес.";
 		else
-			return "Subscribes ID#" + id + ": userID#" + userID + ", magazineID#" + magazineID
+			return "Subscribe ID#" + id + ": userID#" + userID + ", magazineID#" + magazineID
 					+ ", Подписка оформлена: " + subscribeStatus + ", Дата оформления подписки: " + subscribeDate
 					+ ", Период подписки: " + subscribePeriod + " мес.";
 	}

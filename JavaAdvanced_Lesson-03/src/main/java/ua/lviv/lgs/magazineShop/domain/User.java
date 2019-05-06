@@ -1,4 +1,4 @@
-package ua.lviv.lgs.MagazineShop;
+package ua.lviv.lgs.magazineShop.domain;
 
 public class User {
 	private int id;

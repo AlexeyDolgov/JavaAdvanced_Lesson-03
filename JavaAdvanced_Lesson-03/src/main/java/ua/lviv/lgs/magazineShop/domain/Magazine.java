@@ -1,4 +1,4 @@
-package ua.lviv.lgs.MagazineShop;
+package ua.lviv.lgs.magazineShop.domain;
 
 import java.time.LocalDate;
 
@@ -7,21 +7,21 @@ public class Magazine {
 	private String title;
 	private String description;
 	private LocalDate publishDate;
-	private double subscriptionPrice;
+	private int subscribePrice;
 
-	public Magazine(int id, String title, String description, LocalDate publishDate, double subscriptionPrice) {
+	public Magazine(int id, String title, String description, LocalDate publishDate, int subscribePrice) {
 		this.id = id;
 		this.title = title;
 		this.description = description;
 		this.publishDate = publishDate;
-		this.subscriptionPrice = subscriptionPrice;
+		this.subscribePrice = subscribePrice;
 	}
 
-	public Magazine(String title, String description, LocalDate publishDate, double subscriptionPrice) {
+	public Magazine(String title, String description, LocalDate publishDate, int subscribePrice) {
 		this.title = title;
 		this.description = description;
 		this.publishDate = publishDate;
-		this.subscriptionPrice = subscriptionPrice;
+		this.subscribePrice = subscribePrice;
 	}
 
 	public int getId() {
@@ -56,21 +56,22 @@ public class Magazine {
 		this.publishDate = publishDate;
 	}
 
-	public double getSubscriptionPrice() {
-		return subscriptionPrice;
+	public int getSubscribePrice() {
+		return subscribePrice;
 	}
 
-	public void setSubscriptionPrice(double subscriptionPrice) {
-		this.subscriptionPrice = subscriptionPrice;
+	public void setSubscribePrice(int subscribePrice) {
+		this.subscribePrice = subscribePrice;
 	}
 
 	@Override
 	public String toString() {
 		if (id == 0)
 			return "Журнал \"" + title + "\", " + description + ", Дата выхода: " + publishDate + ", Цена подписки: "
-					+ subscriptionPrice + " грн.";
+					+ subscribePrice / 100 + "." + String.format("%02d", subscribePrice % 100) + " грн.";
 		else
 			return "Magazine ID#" + id + ": Журнал \"" + title + "\", " + description + ", Дата выхода: " + publishDate
-					+ ", Цена подписки: " + subscriptionPrice + " грн.";
+					+ ", Цена подписки: " + subscribePrice / 100 + "." + String.format("%02d", subscribePrice % 100)
+					+ " грн.";
 	}
 }
