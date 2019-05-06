@@ -8,7 +8,7 @@ Log4j Logging
 - Читач може відмінити підписку журналу.
 - Незареєстрований користувач може переглядати журнали, проте не може оформити підписку.<br><br>
 
-Реалiзувати деякi [завдання](https://github.com/AlexeyDolgov/JavaAdvanced_Lesson-03/tree/master/JavaAdvanced_Lesson-03/src/main/java/ua/lviv/lgs/MagazineShop) до проекту:
+Реалiзувати деякi [завдання](https://github.com/AlexeyDolgov/JavaAdvanced_Lesson-03/tree/master/JavaAdvanced_Lesson-03/src/main/java/ua/lviv/lgs/magazineShop) до проекту:
 1. Під'єднати до проекту бібліотеку логера.
 2. Налаштувати його таким чином, щоб він писав логи `error` у файлик `server.error.log`, а логи `debug`, `info`, `warn` виводив на консоль.
 3. Провести логування.
